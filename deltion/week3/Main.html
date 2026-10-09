@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Schatje</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Hey Schatje!</h1>
+        <p>Mag ik een kusje?</p>
+
+        <div class="buttons">
+          <button id="knop1" onclick="Ja()">Ja!</button>
+          <button id="knop2" onclick="Nee()">Nee!</button>
+        </div>
+
+        <div id="result"></div>
+      </div>
+
+      <div id="media">
+        <video src="Video.mp4" autoplay loop muted playsinline></video>
+      </div>
+    </div>
+
+    <script>
+      function Ja() {
+        document.getElementById("result").textContent = "Hou van jou <3";
+        document.getElementById("media").innerHTML = "<video src='kirikie.mp4' autoplay loop muted playsinline></video>";
+      }
+
+      function Nee() {
+        document.getElementById("result").textContent = "Awh, jammer! <3";
+        document.getElementById("media").innerHTML = "<img src='images.jpg' alt='Image'>";
+      }
+    </script>
+  </body>
+</html>

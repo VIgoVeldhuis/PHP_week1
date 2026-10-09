@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+        }
+
+        .card {
+            border: 1px solid #c7cce0;
+            border-radius: 8px;
+            padding: 18px;
+            max-width: 400px;
+        }
+
+        #resultaat {
+            margin-top: 20px;
+            background-color: cornsilk;
+            padding: 10px;
+        }
+
+        .typeavond {
+            Padding: 10px;
+            Padding-left: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1> Game-Avond Manager</h1>
+        <label for="typeavond">Kies uw type avond:</label>
+        <select id="typeavondbtn" type="select" onchange="Gametype()">
+            <option value="Casual">Casual</option>
+            <option value="Competitve">Competitive</option>
+            <option value="Co-op">Co-op</option>
+        </select> <br> <br>
+
+
+        <input type="text" id="input" placeholder="Voeg spel toe">
+        <button id="Voegspelbtn" onclick="voegSpelToe()"> Voeg spel </button>
+
+
+
+        <br> <br>
+        <select name="extra's" id="snacks" onclick="Snacks()" multiple size="3">
+            <option value="Popcorn">Popcorn</option>
+            <option value="Drinken">Drinken</option>
+            <option value="Chips">Chips</option>
+        </select>
+        <br> <br>
+        <button id="resultbtn" onclick="toonResultaat()"> Toon Resultaat </button>
+        <br> <br>
+        <button id="reset" onclick="reset()"> Reset </button>
+
+    </div>
+    <div id="resultaat"> </div>
+
+</body>
+<script>
+    function Gametype() {
+        console.log('dfghjk');
+        const selectElement = document.getElementById("typeavondbtn");
+        const selectedOption = selectElement.value;
+        document.getElementById("resultaat").innerHTML = " Type avond: " + selectedOption;
+
+    }
+
+    function voegSpeltoe() {
+        const input = document.getElementById("input").value;
+        document.getElementById("resultaat").innerHTML = "<br> Toegevoegd spel: " + input;
+    
+    }
+    function Snacks() { 
+       
+
+    } 
+    function toonResultaat() { 
+        // showResult = document.getElementById("resultaat").innerHTML;
+        // document.getElementById("resultaat").innerHTML = "Resultaat: <br>" + "Type avond: " ;
+        // document.getElementById("resultaat").innerHTML = " Type avond: " + selectedOptions;
+        // document.getElementById("snacks").innerHTML = "Toegevoegd snacks: " + document.getElementById("snacks").value;
+ let input = document.getElementById("input").value;
+                document.getElementById("resultaat").innerHTML = "Resultaat: <br>" +  " Type avond: " + document.getElementById("typeavondbtn").value + " <br> Spellen: " + document.getElementById("input").value
+  +          "<br> Snacks: " + document.getElementById("snacks").value;
+    }
+
+    function reset() { 
+        document.getElementById("fresh").innerHTML = "";
+    }
+</script>

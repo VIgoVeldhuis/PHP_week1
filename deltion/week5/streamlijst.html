@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1> Streaming lijst </h1>
+    <div id=lijst> </div>
+    <button id="knop1" onclick="toonEersteEnLaatste()"> Toon eerste en laatste </button>
+    <button id="knop2" onclick="Vervangtweedeentoonalle()"> Toon tweede serie en toon de hele lijst </button>
+    <br> <br> <input type="text" id="input" placeholder="Voeg Serie toe">
+    <button id="knop3" onclick="voegSerieToe()"> Voeg serie toe </button>
+    <button id="reset" onclick="Reset()"> Reset </button>
+
+
+    <div id="result"> </div>
+</body>
+<script>
+    const seriesbasis = ["Grey's Anatomy", "Stranger things", "Outer Banks"];
+    let series = seriesbasis;
+    toonalle();
+
+
+    function toonEersteEnLaatste() {
+        document.getElementById("lijst").innerHTML = seriesbasis[0] + " en " + seriesbasis [seriesbasis.length - 1];
+
+    }
+
+    function toonalle() {
+        document.getElementById("lijst").innerHTML = series[0] + ", " + series[1] + ", " + series[2];
+    }
+
+    function voegSerieToe() {
+        const input = document.getElementById("input").value;
+        series.push(input);
+        document.getElementById("lijst").innerHTML = series;
+    }
+
+    function Reset() {
+        series=seriesbasis;
+
+        toonalle();
+    }
+    function Vervangtweedeentoonalle() {
+        series[1] = "Eetclub";
+        toonalle();
+    }
+</script>

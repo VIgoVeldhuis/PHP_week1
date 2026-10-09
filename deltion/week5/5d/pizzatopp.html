@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet">
+        </head>
+        <body>
+<h1> Pizza Extra's</h1>
+
+<label for="Top">Kies uw toppings:</label>
+
+<select name="Toppings" id="Top" multiple>
+  <option value="Kaas">Kaas</option>
+  <option value="Mozzarella">Mozzarella</option>
+  <option value="Pepperoni">Pepperoni</option>
+  <option value="Ananas">Ananas</option>
+</select>
+<button id=button type="button" onclick="toonGekozenToppings()">Toon gekozen toppings</button>
+
+
+        </body>  
+    <script> 
+        function toonGekozenToppings() {
+            const selectElement = document.getElementById("Top");
+            const selectedOptions = Array.from(selectElement.selectedOptions);
+            document.getElementById("result").innerHTML = "Gekozen toppings: " + selectedOptions.join(", ");
+        }
+    </script> 
