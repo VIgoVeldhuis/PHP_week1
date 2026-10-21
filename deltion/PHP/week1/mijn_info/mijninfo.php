@@ -3,7 +3,7 @@
 echo "<br> Vigo Veldhuis<br>"; 
 echo "97122016<br>";
 echo "SD1a<br>";
-echo "poep"
+echo "poop"
 
 
     $a = "Ik heb niet gefaald, ";
@@ -23,5 +23,6 @@ $c = "niet.";
 $f = "Mensen " . $a . "en maken," . " Werken " . $c . "<br> - Albert Plasman (KLM)";
 
 echo $f;
+echo "poop"
 ?> 
 
