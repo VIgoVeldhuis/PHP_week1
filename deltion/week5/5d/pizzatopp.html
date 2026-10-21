@@ -17,12 +17,20 @@
 </select>
 <button id=button type="button" onclick="toonGekozenToppings()">Toon gekozen toppings</button>
 
+<div  id="result">  </div>
+
 
         </body>  
     <script> 
         function toonGekozenToppings() {
             const selectElement = document.getElementById("Top");
             const selectedOptions = Array.from(selectElement.selectedOptions);
-            document.getElementById("result").innerHTML = "Gekozen toppings: " + selectedOptions.join(", ");
+            let text = "";
+            for (let i = 0; i < selectedOptions.length; i++) {
+                text += selectedOptions[i].value + ", ";
+               console.log(selectedOptions[i].value)
+            }
+            document.getElementById("result").innerHTML = "Gekozen toppings: " + text;
+
         }
     </script> 

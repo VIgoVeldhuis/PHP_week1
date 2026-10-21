@@ -5,18 +5,22 @@ echo "97122016<br>";
 echo "SD1a<br>";
 
 
-    $a = "Ik heb niet gefaald";
+    $a = "Ik heb niet gefaald, ";
     $b = "die niet werken";
     $c = 10000;
 
 echo "<br>";
 echo "<hr>";
-$d = $a. "Ik heb alleen" . $c . " manieren gevonden " . $b . ". <br>" "- Thomas Edison<br>";
+$d = $a. "Ik heb alleen " . $c . " manieren gevonden " . $b . ". <br>- Thomas Edison<br><br>";
 
 echo $d;
 
+$a = "die geen fout";
+$b = "en";
+$c = "niet.";
 
-echo "- Thomas Edison<br>";
+$f = "Mensen " . $a . "en maken," . " Werken " . $c . "<br> - Albert Plasman (KLM)";
 
+echo $f;
 ?> 
 
