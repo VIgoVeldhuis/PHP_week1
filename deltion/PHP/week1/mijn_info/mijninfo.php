@@ -24,5 +24,8 @@ $f = "Mensen " . $a . "en maken," . " Werken " . $c . "<br> - Albert Plasman (KL
 
 echo $f;
 echo "poop"
-?> 
+ 
 
+echo "blablabla "
+
+?> 
